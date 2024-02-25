@@ -1,9 +1,18 @@
 version: 1
 frontend:
   phases:
+    preBuild:
+      commands:
+        - sudo yum install -y java-11-amazon-corretto-devel
+        - ls /usr/lib/jvm/java-11-amazon-corretto.x86_64
+        - export JAVA_HOME=/usr/lib/jvm/java-11-amazon-corretto.x86_64
+
     build:
       commands:
-        - chmod +x ./gradlew  # This line is added to ensure the script has execute permissions
+
+        - export JAVA_HOME=/usr/lib/jvm/java-11-amazon-corretto.x86_64
+        - chmod +x ./gradlew
+        - $JAVA_HOME/bin/java -version
         - ./gradlew clean
         - ./gradlew assembleRelease
   artifacts:
@@ -13,3 +22,6 @@ frontend:
   cache:
     paths:
       - ~/.gradle/**/*
+env:
+  variables:
+    JAVA_HOME: /usr/lib/jvm/java-11-amazon-corretto.x86_64
