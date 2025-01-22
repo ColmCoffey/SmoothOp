@@ -1,1 +1,1 @@
-<iframe src="https://github.com/ColmCoffey/SmoothOpAWS/blob/master/SmoothOp-Medical%20Device%20Design%20Portfolio%20-%20Colm%20Coffey.pdf" width="100%" height="600px"></iframe>
+<iframe src="https://docs.google.com/viewer?url=https://raw.githubusercontent.com/ColmCoffey/Medical-Device-Portfolio/main/Colm%20Coffey_Medical%20Device%20Portfolio.pdf&embedded=true" width="100%" height="500px"></iframe>
